@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Простая страница для тестирования Lighthouse с идеальными показателями производительности, доступности, лучших практик и SEO.">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Lighthouse Test Page</title>
+
+    <!-- Критический CSS инлайн для быстрого First Contentful Paint -->
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            padding: 1rem 2rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-top: 0.75rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            color: #ffffff;
+            background-color: #1a1a2e;
+            border: 2px solid #1a1a2e;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:focus-visible {
+            outline: 3px solid #4a90d9;
+            outline-offset: 2px;
+        }
+
+        #output {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f0f0f5;
+            border-radius: 6px;
+            min-height: 2.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: #555555;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Lighthouse Test Page</h1>
+</header>
+
+<main>
+    <h2>О странице</h2>
+    <p>
+        Эта страница создана для тестирования в Lighthouse.
+        Она оптимизирована для получения максимальных баллов по всем четырём
+        категориям: Performance, Accessibility, Best Practices и SEO.
+    </p>
+
+    <h2>Интерактивный блок</h2>
+    <button type="button" id="action-btn">Нажми меня</button>
+    <div id="output" role="status" aria-live="polite">
+        Здесь появится результат.
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Lighthouse Test. Все права защищены.</p>
+</footer>
+
+<!-- defer — не блокирует парсинг HTML -->
+<script src="src/main.js" defer></script>
+</body>
+</html>

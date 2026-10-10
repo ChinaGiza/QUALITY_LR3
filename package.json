@@ -1,0 +1,20 @@
+{
+  "name": "quality_lr3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "vite build",
+    "test:lighthouse": "npm run build && npx serve -s dist -l 3000 & sleep 5 && npx lhci autorun"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "serve": "^14.2.6",
+    "vite": "^8.3.4"
+  }
+}
