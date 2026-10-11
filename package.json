@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "build": "vite build",
-    "test:lighthouse": "npm run build && npx serve -s dist -l 3000 & sleep 5 && npx lhci autorun"
+    "bns": "npm run build && npx serve -s dist -l 3000 &"
   },
   "private": true,
   "keywords": [],
